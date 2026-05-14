@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timberry Farm | Organic Berries</title>
+    <!-- Шрифти: Amatic SC та Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <img src="img/timberry1.png" alt="Timberry" class="logo-img">
+            </div>
+            
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#about" data-i18n="nav-about">About Us</a></li>
+                    <li><a href="#products" data-i18n="nav-products">Our Products</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">Contacts</a></li>
+                </ul>
+            </nav>
+            
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ua">UA</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Секція Про нас -->
+    <section id="about" class="split-section reveal">
+        <div class="image-side">
+            <img src="img/IMG_3595.jpg" alt="Organic farming box">
+        </div>
+        <div class="text-side green-bg">
+            <h1 class="brand-title">TIMBERRY FARM</h1>
+            <h2 data-i18n="about-title">About Us</h2>
+            <div class="description-text">
+                <p data-i18n="about-full-p1">Timberry specializes in growing berry crops for further freezing and processing. Planting material is supplied from leading nurseries, and cultivation is carried out in accordance with the principles of organic farming with constant control at all stages of production. This guarantees quality, safety, and ecological integrity of the products.</p>
+                <p data-i18n="about-full-p2">Timberry — це праця та натхнення всіх членів дружньої команди чудових та відповідальних співробітників. Ми постійно шукаємо щось нове, вдосконалюємо звичне та просто працюємо, бо нам подобається.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секція Товари -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title reveal" data-i18n="nav-products">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card reveal">
+                    <div class="card-content">
+                        <h3 data-i18n="prod-1">Raspberry (Frozen)</h3>
+                        <img src="img/photo_2026-05-13_17-44-03.jpg" alt="Raspberry">
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="card-content">
+                        <h3 data-i18n="prod-2">Blueberry (Frozen)</h3>
+                        <img src="img/2c7fdd24b2e371996790d4dca88b72d5.jpeg" alt="Blueberry">
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="card-content">
+                        <h3 data-i18n="prod-3">Blackberry (Frozen)</h3>
+                        <img src="img/IMG_3595.jpg" alt="Blackberry">
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="card-content">
+                        <h3 data-i18n="prod-4">Wild Strawberry (Frozen)</h3>
+                        <img src="img/sonnik_zemljanika_k_chemu_snitsja_i_chto_oznachaet_son_pro_zemljaniku.jpg" alt="Wild Strawberry">
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="card-content">
+                        <h3 data-i18n="prod-5">Blackcurrant (Frozen)</h3>
+                        <img src="img/photo_2026-05-13_17-33-43.jpg" alt="Blackcurrant">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секція Контакти -->
+    <section id="contact" class="split-section reveal">
+        <div class="image-side">
+            <img src="img/IMG_4664.jpg" alt="Contacts">
+        </div>
+        <div class="text-side purple-bg">
+            <h2 class="contact-header" data-i18n="contact-title">ЗВ'ЯЖІТЬСЯ З НАМИ</h2>
+            <div class="contact-flex">
+                <div class="contact-left">
+                    <div class="contact-row">
+                        <div class="row-icons">
+                            <a href="https://wa.me/4407555476792" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://t.me/+4407555476792" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                        </div>
+                        <p class="phone-number">+44 075 554 767 92</p>
+                    </div>
+                    <div class="contact-row">
+                        <div class="row-icons">
+                            <a href="https://wa.me/380639037525" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://t.me/+380639037525" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                        </div>
+                        <p class="phone-number">+38 063 903 75 25</p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="contact-right">
+                    <p class="email-text">info@timberry.farm</p>
+                    <p class="address-footer" data-i18n="address">м.Львів, вул. Пасічна 171</p>
+                </div>
+            </div>
+            <div class="contact-map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.9148833357804!2d24.069599177123763!3d49.80415477147595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae819e5d4cbcb%3A0x54bc1ac9b938415a!2sVulytsya%20Pasichna%2C%20171%2C%20L&#39;viv%2C%20L&#39;vivs&#39;ka%20oblast%2C%2079000!5e1!3m2!1sen!2sua!4v1778703093816!5m2!1sen!2sua" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <button id="privacy-btn" class="btn-outline" data-i18n="privacy-link">Privacy Policy</button>
+            <p>&copy; 2026 Timberry Farm.</p>
+        </div>
+    </footer>
+
+    <!-- Модалка  -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <h2 data-i18n="privacy-link">Privacy Policy</h2>
+                <span class="close-btn" title="Close Modal">&times;</span>
+            </div>
+            <div id="privacy-text" class="modal-body">
+                <!-- Текст вставляється через JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
