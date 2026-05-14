@@ -89,25 +89,39 @@ const menuBtn = document.getElementById('mobile-menu-btn');
 const navMenu = document.getElementById('nav-menu');
 
 if (menuBtn && navMenu) {
-    menuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navMenu.classList.toggle('active');
+    });
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', () => navMenu.classList.remove('active'));
     });
 }
 
-const observer = new IntersectionObserver((entries) => {
+// Observer для анімацій
+const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('active');
     });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-document.querySelectorAll('.lang-btn').forEach(btn => {
+// Перемикач мов з анімацією Fade
+const langButtons = document.querySelectorAll('.lang-btn');
+
+langButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        setLanguage(btn.getAttribute('data-lang'));
+        if (btn.classList.contains('active')) return;
+        const selectedLang = btn.getAttribute('data-lang');
+        document.body.classList.add('lang-switching-active');
+
+        setTimeout(() => {
+            langButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            setLanguage(selectedLang);
+            document.body.classList.remove('lang-switching-active');
+        }, 300);
     });
 });
 
@@ -122,6 +136,7 @@ function setLanguage(lang) {
     document.documentElement.lang = lang;
 }
 
+// Модалка
 const modal = document.getElementById("privacy-modal");
 const privacyBtn = document.getElementById("privacy-btn");
 const closeBtn = document.querySelector(".close-btn");
